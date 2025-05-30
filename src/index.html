@@ -88,7 +88,64 @@
 <script>
   document.getElementById('login-icon').addEventListener('click', function(event) {
     event.preventDefault();
-    alert(' inicio de sesión más adelante');
+  });
+</script>
+
+<!-- Inicio de Sesión -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-orange text-white">
+        <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm">
+          <div class="mb-3">
+            <label for="username" class="form-label">Usuario</label>
+            <input type="text" class="form-control" id="username" placeholder="Ingrese su usuario" required>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
+          </div>
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-orange">Entrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Obtener ícono login
+  const loginIcon = document.getElementById('login-icon');
+  loginIcon.addEventListener('click', function(event) {
+    event.preventDefault();
+    var loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+    loginModal.show();
+  });
+
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    if(username === '' || password === '') {
+      alert('Por favor ingrese usuario y contraseña');
+      return;
+    }
+
+    // Alerta autenticación
+    alert(`Usuario: ${username}\nContraseña: ${password}\nFuncionalidad en desarrollo.`);
+    
+    // Cerrar modal después de "login"
+    var modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+    modal.hide();
+
+    // Opcional: limpiar formulario
+    this.reset();
   });
 </script>
 
