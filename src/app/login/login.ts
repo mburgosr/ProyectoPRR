@@ -10,14 +10,13 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./login.css']
 })
 export class LoginComponent {
-  email: string = '';
+  user: string = '';
   password: string = '';
 
   onSubmit() {
-    if (this.email && this.password) {
-      // Aquí puedes llamar a tu servicio PHP para validar
-      alert(`Correo: ${this.email}\nContraseña: ${this.password}`);
-      // Más adelante integración real
+    if (this.user && this.password) {
+      alert(`Correo: ${this.user}\nContraseña: ${this.password}`); //visualiza lo escrito
+      // Validaciones
     }
   }
 }

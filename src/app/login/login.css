@@ -1,23 +1,15 @@
 .login-background {
-  background-color: #d96800; /* Naranja similar al diseño */
-}
-
-.login-card {
-  background: white;
-  width: 350px;
-  border-radius: 8px;
-}
-
-.login-card {
-  width: 100%;
-  border-radius: 0;
-  box-shadow: none;
-  padding: 0;
-}
-
-.login-background {
-  background: transparent;
+  background-color: #d96800;
   padding: 0;
   height: auto;
   display: block;
+}
+
+.login-card {
+  background: #ffffff;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: none;
+  padding: 0;
+  background-color: #d96800;
 }
