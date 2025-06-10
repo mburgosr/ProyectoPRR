@@ -1,0 +1,75 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-orange fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Patricio Rivera Rivera</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#inicio">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#quienes-somos">Quiénes Somos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#servicios">Nuestros Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contactenos">Contáctenos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal" id="login-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" 
+                class="bi bi-person-fill" viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="inicio" class="bg-light">
+  <div class="container">
+    <h1>Bienvenido a Mi Portal</h1>
+  </div>
+</section>
+
+<section id="quienes-somos">
+  <div class="container">
+    <h2>Quiénes Somos</h2>
+    <p>Somos la empresa Patricio Rivera Rivera, lideres...</p>
+  </div>
+</section>
+
+<section id="servicios" class="bg-light">
+  <div class="container">
+    <h2>Nuestros Servicios</h2>
+    <p>Materiales de Construcción</p>
+  </div>
+</section>
+
+<section id="contactenos">
+  <div class="container">
+    <h2>Contáctenos</h2>
+    <p>Para más información escribenos</p>
+  </div>
+</section>
+
+<!-- Login -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3">
+      <app-login></app-login>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-white text-center py-3">
+  <div class="container">
+    <p>&copy; 2025 Patricio Rivera Rivera. Todos los derechos reservados.</p>
+  </div>
+</footer>

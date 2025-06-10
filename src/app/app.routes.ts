@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login';
 import { ClienteComponent } from './cliente/cliente';
+import { InicioComponent } from './inicio/inicio';
 
 
 export const routes: Routes = [
+  { path: '', component: InicioComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'cliente', component: ClienteComponent },
-  { path: '', component: LoginComponent },
-  { path: '**', redirectTo: '' }  //Redirige otras rutas a login
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
