@@ -25,10 +25,10 @@ export class LoginComponent {
       const modalElement = document.getElementById('loginModal');
       const modalBackdrop = document.querySelector('.modal-backdrop');
 
-      if (modalElement) {
+      if (modalElement instanceof HTMLElement) {
         const modal = bootstrap.Modal.getInstance(modalElement);
         if (modal) {
-          modal.hide();  // Ahora TypeScript está seguro que modal no es null
+          modal.hide();
         }
       }
 
@@ -36,7 +36,7 @@ export class LoginComponent {
         modalBackdrop.remove(); // Remueve manualmente el backdrop oscuro
       }
 
-      // Espera un pequeño retraso antes de navegar para asegurarte de que el modal cierre primero
+      // Pequeño retraso antes de navegar para asegurar de que el modal cierre primero
       setTimeout(() => {
         this.router.navigate(['/cliente']);
       }, 300);
